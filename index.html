@@ -4,11 +4,11 @@
     <tbody>
         <tr>
             <td><strong>Last updated</strong></td>
-            <td>19.10.2016</td>
+            <td>31.10.2016</td>
         </tr>
         <tr>
             <td><strong>Version No</strong></td>
-            <td>1.17</td>
+            <td>1.18</td>
         </tr>
         <tr>
             <td><strong>Owner</strong></td>
@@ -84,6 +84,12 @@
 <td>Add business address to vendor requests</td>
 <td>PI</td>
 <td>1.17</td>
+</tr>
+<tr>
+<td>31.10.16</td>
+<td>Improve description for response error codes</td>
+<td>PI</td>
+<td>1.18</td>
 </tr>
 </tbody>
 </table>
@@ -318,9 +324,10 @@ You can call the API method PaymentStatus to check if the payment was successful
 <table>
 <thead>
 <tr>
-<th>Error Code</th>
+<th>Error</th>
 <th>HTTP Status</th>
 <th>Message</th>
+<th>Code</th>
 </tr>
 </thead>
 <tbody>
@@ -328,66 +335,97 @@ You can call the API method PaymentStatus to check if the payment was successful
 <td>OK</td>
 <td>200</td>
 <td>Request was successful</td>
+<td>-</td>
 </tr>
 <tr>
 <td>BAD_REQUEST</td>
 <td>400</td>
 <td>General error, e.g. the request contained invalid data</td>
+<td>7</td>
 </tr>
 <tr>
 <td>LOW_PAYMENT_AMOUNT</td>
 <td>400</td>
-<td>The requested payment amount is too low</td>
+<td>Low payment amount. Please refer to documentation for minimum payment amount supported</td>
+<td>80</td>
 </tr>
 <tr>
 <td>HTTP_REQUEST_METHOD_NOT_SUPPORTED</td>
 <td>400</td>
 <td>The requested HTTP verb is not supported</td>
+<td>113</td>
 </tr>
 <tr>
 <td>WRONG_USERNAME_OR_PASSWORD</td>
 <td>401</td>
-<td>The supplied credentials are incorrect or don’t match</td>
+<td>Wrong ‘username’, ‘password’ or ‘apiKey’ provided</td>
+<td>8</td>
 </tr>
 <tr>
 <td>MERCHANT_DISABLED</td>
 <td>403</td>
 <td>The merchant account is disabled</td>
+<td>34</td>
 </tr>
 <tr>
 <td>MERCHANT_NOT_APPROVED</td>
 <td>403</td>
-<td>The merchant is currently not approved</td>
+<td>The merchant is currently not approved. Please approve the merchant before proceeding</td>
+<td>50</td>
 </tr>
 <tr>
 <td>PURCHASER_NOT_VERIFIED</td>
 <td>403</td>
-<td>The purchaser is not verified (for merchants who only accept verified purchasers)</td>
+<td>The purchaser is not verified. Please verify it before proceeding</td>
+<td>38</td>
+</tr>
+<tr>
+<td>PURCHASER_DISABLED</td>
+<td>403</td>
+<td>The Purchaser has been disabled. Please enable it before proceeding</td>
+<td>117</td>
 </tr>
 <tr>
 <td>MAPI_UNKNOWN_VENDOR</td>
 <td>404</td>
-<td>The given vendor ID is unknown</td>
+<td>Cannot find vendor with the given ID</td>
+<td>101</td>
 </tr>
 <tr>
 <td>MAPI_REDIRECT_URL_MISSING</td>
 <td>400</td>
-<td>The merchant’s redirect URL is not specified</td>
+<td>Merchant didn’t specify RedirectURL. Please specify RedirectURL before proceeding</td>
+<td>103</td>
 </tr>
 <tr>
 <td>ENTITY_NOT_FOUND</td>
 <td>404</td>
-<td>A general error that the requested entity is not found</td>
+<td>The entity you are requesting is not found</td>
+<td>3</td>
 </tr>
 <tr>
 <td>MAPI_CONTACT_CUSTOMER_SUPPORT</td>
 <td>403</td>
 <td>The call couldn’t be completed, contact Payment21® customer support for manual resolution</td>
+<td>102</td>
 </tr>
 <tr>
 <td>INTERNAL_SERVER_ERROR</td>
 <td>500</td>
 <td>An unknown error occurred, please try again later or contact Payment21® for clarification</td>
+<td>2</td>
+</tr>
+<tr>
+<td>INVALID_ARGUMENT_EMAIL</td>
+<td>400</td>
+<td>Invalid email. Please specify valid email address</td>
+<td>118</td>
+</tr>
+<tr>
+<td>INVALID_ARGUMENT_DELIVERY_LEVEL</td>
+<td>400</td>
+<td>Please specify ‘deliveryLevel’ argument</td>
+<td>119</td>
 </tr>
 </tbody>
 </table>
@@ -403,7 +441,9 @@ You can call the API method PaymentStatus to check if the payment was successful
 <span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">28</span>
 
 <span class="json">{
-  "<span class="hljs-attribute">error</span>":<span class="hljs-value"><span class="hljs-string">"ENTITY_NOT_FOUND"</span>
+  "<span class="hljs-attribute">error</span>":<span class="hljs-value"><span class="hljs-string">"ENTITY_NOT_FOUND"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The entity you are requesting is not found"</span>
 </span>}
 </span></code></pre>
 <p><strong>Payment21® Crypto (CreateVendor) Validation Error Response Example 1:</strong></p>
@@ -415,6 +455,8 @@ You can call the API method PaymentStatus to check if the payment was successful
 
 <span class="json">{
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"BAD_REQUEST"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">7</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"General error, e.g. the request contained invalid data"</span></span>,
   "<span class="hljs-attribute">fieldErrors</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">field</span>": <span class="hljs-value"><span class="hljs-string">"email"</span></span>,
@@ -436,6 +478,8 @@ You can call the API method PaymentStatus to check if the payment was successful
 
 <span class="json">{
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"BAD_REQUEST"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">7</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"General error, e.g. the request contained invalid data"</span></span>,
   "<span class="hljs-attribute">fieldErrors</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">field</span>": <span class="hljs-value"><span class="hljs-string">"company"</span></span>,
@@ -1017,6 +1061,36 @@ You can call the API method PaymentStatus to check if the payment was successful
     <span class="hljs-string">"transactionId"</span>,
     <span class="hljs-string">"redirectTo"</span>
   ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 17:42:31 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">135</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"WRONG_USERNAME_OR_PASSWORD"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Wrong 'username', 'password' or 'apiKey' provided"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">error</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error as found in the Error Code List"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error code as numerical value"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descriptive message for the error"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"error"</span>,
+    <span class="hljs-string">"code"</span>,
+    <span class="hljs-string">"message"</span>
+  ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="api-reference-paymentstatus" class="resource"><h3 class="resource-heading">PaymentStatus <a href="#api-reference-paymentstatus" class="permalink">&nbsp;&para;</a></h3><div id="api-reference-paymentstatus-get" class="action get"><h4 class="action-heading"><div class="name">PaymentStatus</div><a href="#api-reference-paymentstatus-get" class="method get">GET</a><code class="uri">/api/mapi/paymentStatus/{merchantId}/{transactionId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://app.payment21.com</span>/api/mapi/paymentStatus/<span class="hljs-attribute" title="merchantId">-1</span>/<span class="hljs-attribute" title="transactionId">4e1736f3-17bd-4477-9159-3bcfa8685bbd</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>merchantId</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>-1</span></span></dd><dt>transactionId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>4e1736f3-17bd-4477-9159-3bcfa8685bbd</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">apiKey</span>: <span class="hljs-string">demoShopApiKey</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json, application/*+json</span><br><span class="hljs-attribute">Cache-Control</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">Pragma</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">User-Agent</span>: <span class="hljs-string">Java/1.8.0_25</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">app.payment21.com</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span></code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Path and header parameters"</span></span>,
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
@@ -1100,6 +1174,36 @@ You can call the API method PaymentStatus to check if the payment was successful
   </span>}</span>,
   "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
     <span class="hljs-string">"status"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 17:42:31 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">135</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"WRONG_USERNAME_OR_PASSWORD"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Wrong 'username', 'password' or 'apiKey' provided"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">error</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error as found in the Error Code List"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error code as numerical value"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">redirectTo</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descriptive message for the error"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"error"</span>,
+    <span class="hljs-string">"code"</span>,
+    <span class="hljs-string">"message"</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="api-reference-updatevendor" class="resource"><h3 class="resource-heading">UpdateVendor <a href="#api-reference-updatevendor" class="permalink">&nbsp;&para;</a></h3><div id="api-reference-updatevendor-put" class="action put"><h4 class="action-heading"><div class="name">UpdateReplaceVendor</div><a href="#api-reference-updatevendor-put" class="method put">PUT</a><code class="uri">/api/mapi/updateVendor</code></h4><p>This request updates all required information of a vendor associated to the given merchant. To identify the vendor, the ID returned from the CreateVendor API call has to be supplied.</p>
 <h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://app.payment21.com</span>/api/mapi/updateVendor</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">apiKey</span>: <span class="hljs-string">apiKeyDEMO</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json, application/*+json</span><br><span class="hljs-attribute">Cache-Control</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">Pragma</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">User-Agent</span>: <span class="hljs-string">Java/1.8.0_25</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">app.payment21.com</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">1671</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -1769,7 +1873,7 @@ You can call the API method PaymentStatus to check if the payment was successful
     <span class="hljs-string">"company"</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>This method doesn’t return any information if successfully called. Please see the API error section for further details.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 19 Oct 2016</p><script>/* eslint-env browser */
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 31 Oct 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
