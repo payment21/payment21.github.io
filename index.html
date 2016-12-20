@@ -1,14 +1,14 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Payment21® Crypto API 1.17</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:1.5em;font:400 14px / 1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}div.content h1{color:#004b8d;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:bold;background-image:url(images/payment21-logo.svg);background-size:280px auto;background-repeat:no-repeat;background-position:0 -23px;padding-top:70px}div.content>h2{color:#004b8d;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:30px;font-weight:bold;line-height:1.1em;margin-top:30px}div.content>h3{color:#78ab38;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:22px;font-weight:bold;line-height:1.1em;text-transform:none;margin-top:20px}div.content>h4{font-size:140%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:none;text-decoration:underline}p{text-align:justify}p>img{max-width:100%;height:auto}a:hover{text-decoration:underline}ul.nav-p21{padding:0;margin:0;margin-left:6px;list-style:none}ul::after{display:block;content:"";clear:both}ul.nav-p21>li{float:left;margin-right:2px}ul.nav-p21>li>a{display:inline-block;padding:10px 20px;color:rgba(0,0,0,0.7);background-color:#f2f2f2;text-decoration:none;border-top-left-radius:6px;border-top-right-radius:6px}.disable-p21{display:none}ul.nav-p21>li.active-p21>a{background-color:#dff0d8}iframe{border:1px solid #cfcfcf;width:100%;height:200px;background-color:#f5f5f5;border-radius:6px;box-sizing:border-box}body{color:black;background:white;font:400 14px / 1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:36px}h2{font:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#337ab7;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#eff4f9;border-left:4px solid #337ab7}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#337ab7}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#62abed;background-color:#d4e8fa}.badge.head{color:#62abed;background-color:#d4e8fa}.badge.options{color:#62abed;background-color:#d4e8fa}.badge.put{color:#e2af50;background-color:#f4e1bd}.badge.patch{color:#e2af50;background-color:#f4e1bd}.badge.post{color:#a2de56;background-color:#ddf3c1}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#337ab7;cursor:pointer}.collapse-button .open{color:#337ab7;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#337ab7}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e76b8}.definition .method.head{color:#2e76b8}.definition .method.options{color:#2e76b8}.definition .method.post{color:#7bb82e}.definition .method.put{color:#b8882e}.definition .method.patch{color:#b8882e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#004b8d}.action h4.action-heading .method.head{color:#fff;background-color:#004b8d}.action h4.action-heading .method.options{color:#fff;background-color:#004b8d}.action h4.action-heading .method.put{color:#000;background-color:#f0a00a}.action h4.action-heading .method.patch{color:#000;background-color:#f0a00a}.action h4.action-heading .method.post{color:#000;background-color:#78ab38}.action h4.action-heading .method.delete{color:#000;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#b4e2f6}.action.get h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.head{border-color:#b4e2f6}.action.head h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.options{border-color:#b4e2f6}.action.options h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.post{border-color:#dcefac}.action.post h4.action-heading{color:#78ab38;background:#ddf3c1;border-bottom-color:#dcefac}.action.put{border-color:#f0cba7}.action.put h4.action-heading{color:#f0a00a;background:#f4e1bd;border-bottom-color:#f0cba7}.action.patch{border-color:#f0cba7}.action.patch h4.action-heading{color:#f0a00a;background:#f4e1bd;border-bottom-color:#f0cba7}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container-fluid"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#top">Overview</a></div><div class="collapse-content"><ul><li><a href="#header-version">Version</a></li><li><a href="#header-revision-history">Revision History</a></li><li><a href="#header-confidentiality-notice">Confidentiality Notice</a></li><li><a href="#header-1-payment21®-easy-integration-method">1 Payment21® Easy Integration Method</a></li><li><a href="#header-1.1-supported-use-cases">1.1 Supported Use Cases</a></li><li><a href="#header-1.2-payment21®-json-rest-api-">1.2 Payment21® JSON/REST API:</a></li><li><a href="#header-1.3-payment21®-cashier-page-">1.3 Payment21® Cashier Page:</a></li><li><a href="#header-1.4-typical-payment-use-case">1.4 Typical Payment Use Case</a></li><li><a href="#header-2-payment21®-json-rest-api">2 Payment21® JSON/REST API</a></li><li><a href="#header-2.1-json-rest-api-integration-how-to-integrate">2.1 JSON/REST API Integration: How to integrate</a></li><li><a href="#header-2.2-service-operations">2.2 Service Operations</a></li><li><a href="#header-2.3-calling-conventions">2.3 Calling Conventions</a></li><li><a href="#header-2.4-supported-http-verbs">2.4 Supported HTTP Verbs</a></li><li><a href="#header-2.5-authentication-and-authorization">2.5 Authentication and Authorization</a></li><li><a href="#header-3-payment21®-cashier-page">3 Payment21® Cashier Page</a></li><li><a href="#header-3.1-introduction">3.1 Introduction</a></li><li><a href="#header-3.2-what-the-merchant’s-consumers-will-see">3.2 What the merchant’s consumers will see</a></li><li><a href="#header-3.3-how-to-integrate">3.3 How to integrate</a></li><li><a href="#header-4-sandbox-api-connectivity-test">4 Sandbox API Connectivity Test</a></li><li><a href="#header-4.1-merchant-back-office">4.1 Merchant Back Office</a></li><li><a href="#header-4.2-bitcoin-testnet-(customization-upon-request)">4.2 Bitcoin Testnet (Customization upon request)</a></li><li><a href="#header-5-appendix">5 Appendix</a></li><li><a href="#header-5.1-api-response-&amp;-error-codes">5.1 API Response & Error Codes</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#api-reference">API Reference</a></div><div class="collapse-content"><ul><li><a href="#api-reference-createvendor-post"><span class="badge post"><i class="fa fa-plus"></i></span>CreateVendor</a></li><li><a href="#api-reference-p21paybycrypto-post"><span class="badge post"><i class="fa fa-plus"></i></span>P21PayByCrypto</a></li><li><a href="#api-reference-paymentstatus-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>PaymentStatus</a></li><li><a href="#api-reference-updatevendor">UpdateVendor</a><ul><li><a href="#api-reference-updatevendor-put"><span class="badge put"><i class="fa fa-pencil"></i></span>UpdateReplaceVendor</a></li><li><a href="#api-reference-updatevendor-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>UpdateModifyVendor</a></li></ul></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="https://app.payment21.com">https://app.payment21.com</a></p></nav><div class="content"><header><h1 id="top">Payment21® Crypto API 1.17</h1></header><p>The purpose of this document is to describe the requirements, usage, implementation and purpose of the Payment21® Application Programming Interface (API). The API will allow merchants to send payment requests through a consistently available online interface, which can integrate well with any of their existing systems.</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Payment21® Crypto API 1.19</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:1.5em;font:400 14px / 1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}div.content h1{color:#004b8d;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:bold;background-image:url(images/payment21-logo.svg);background-size:280px auto;background-repeat:no-repeat;background-position:0 -23px;padding-top:70px}div.content>h2{color:#004b8d;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:30px;font-weight:bold;line-height:1.1em;margin-top:30px}div.content>h3{color:#78ab38;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:22px;font-weight:bold;line-height:1.1em;text-transform:none;margin-top:20px}div.content>h4{font-size:140%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:none;text-decoration:underline}p{text-align:justify}p>img{max-width:100%;height:auto}a:hover{text-decoration:underline}ul.nav-p21{padding:0;margin:0;margin-left:6px;list-style:none}ul::after{display:block;content:"";clear:both}ul.nav-p21>li{float:left;margin-right:2px}ul.nav-p21>li>a{display:inline-block;padding:10px 20px;color:rgba(0,0,0,0.7);background-color:#f2f2f2;text-decoration:none;border-top-left-radius:6px;border-top-right-radius:6px}.disable-p21{display:none}ul.nav-p21>li.active-p21>a{background-color:#dff0d8}iframe{border:1px solid #cfcfcf;width:100%;height:200px;background-color:#f5f5f5;border-radius:6px;box-sizing:border-box}body{color:black;background:white;font:400 14px / 1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:36px}h2{font:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#337ab7;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#eff4f9;border-left:4px solid #337ab7}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#337ab7}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#62abed;background-color:#d4e8fa}.badge.head{color:#62abed;background-color:#d4e8fa}.badge.options{color:#62abed;background-color:#d4e8fa}.badge.put{color:#e2af50;background-color:#f4e1bd}.badge.patch{color:#e2af50;background-color:#f4e1bd}.badge.post{color:#a2de56;background-color:#ddf3c1}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#337ab7;cursor:pointer}.collapse-button .open{color:#337ab7;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#337ab7}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e76b8}.definition .method.head{color:#2e76b8}.definition .method.options{color:#2e76b8}.definition .method.post{color:#7bb82e}.definition .method.put{color:#b8882e}.definition .method.patch{color:#b8882e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#004b8d}.action h4.action-heading .method.head{color:#fff;background-color:#004b8d}.action h4.action-heading .method.options{color:#fff;background-color:#004b8d}.action h4.action-heading .method.put{color:#000;background-color:#f0a00a}.action h4.action-heading .method.patch{color:#000;background-color:#f0a00a}.action h4.action-heading .method.post{color:#000;background-color:#78ab38}.action h4.action-heading .method.delete{color:#000;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#b4e2f6}.action.get h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.head{border-color:#b4e2f6}.action.head h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.options{border-color:#b4e2f6}.action.options h4.action-heading{color:#004b8d;background:#d4e8fa;border-bottom-color:#b4e2f6}.action.post{border-color:#dcefac}.action.post h4.action-heading{color:#78ab38;background:#ddf3c1;border-bottom-color:#dcefac}.action.put{border-color:#f0cba7}.action.put h4.action-heading{color:#f0a00a;background:#f4e1bd;border-bottom-color:#f0cba7}.action.patch{border-color:#f0cba7}.action.patch h4.action-heading{color:#f0a00a;background:#f4e1bd;border-bottom-color:#f0cba7}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container-fluid"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#top">Overview</a></div><div class="collapse-content"><ul><li><a href="#header-version">Version</a></li><li><a href="#header-revision-history">Revision History</a></li><li><a href="#header-confidentiality-notice">Confidentiality Notice</a></li><li><a href="#header-1-payment21®-easy-integration-method">1 Payment21® Easy Integration Method</a></li><li><a href="#header-1.1-supported-use-cases">1.1 Supported Use Cases</a></li><li><a href="#header-1.2-payment21®-json-rest-api-">1.2 Payment21® JSON/REST API:</a></li><li><a href="#header-1.3-payment21®-cashier-page-">1.3 Payment21® Cashier Page:</a></li><li><a href="#header-1.4-typical-payment-use-case">1.4 Typical Payment Use Case</a></li><li><a href="#header-1.5-payment21®-payout-page">1.5 Payment21® Payout Page</a></li><li><a href="#header-1.6-payout-use-case">1.6 Payout Use Case</a></li><li><a href="#header-2-payment21®-json-rest-api">2 Payment21® JSON/REST API</a></li><li><a href="#header-2.1-json-rest-api-integration-how-to-integrate">2.1 JSON/REST API Integration: How to integrate</a></li><li><a href="#header-2.2-service-operations">2.2 Service Operations</a></li><li><a href="#header-2.3-calling-conventions">2.3 Calling Conventions</a></li><li><a href="#header-2.4-supported-http-verbs">2.4 Supported HTTP Verbs</a></li><li><a href="#header-2.5-authentication-and-authorization">2.5 Authentication and Authorization</a></li><li><a href="#header-3-payment21®-cashier-page">3 Payment21® Cashier Page</a></li><li><a href="#header-3.1-introduction">3.1 Introduction</a></li><li><a href="#header-3.2-what-the-merchant’s-consumers-will-see">3.2 What the merchant’s consumers will see</a></li><li><a href="#header-3.3-how-to-integrate">3.3 How to integrate</a></li><li><a href="#header-4-payment21®-payout-page">4 Payment21® Payout Page</a></li><li><a href="#header-4.1-introduction">4.1 Introduction</a></li><li><a href="#header-4.2-how-to-integrate">4.2 How to integrate</a></li><li><a href="#header-5-sandbox-api-connectivity-test">5 Sandbox API Connectivity Test</a></li><li><a href="#header-5.1-merchant-back-office">5.1 Merchant Back Office</a></li><li><a href="#header-5.2-bitcoin-testnet-(customization-upon-request)">5.2 Bitcoin Testnet (Customization upon request)</a></li><li><a href="#header-6-appendix">6 Appendix</a></li><li><a href="#header-6.1-supported-processing-currencies">6.1 Supported processing currencies</a></li><li><a href="#header-6.2-api-response-&amp;-error-codes">6.2 API Response & Error Codes</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#api-reference">API Reference</a></div><div class="collapse-content"><ul><li><a href="#api-reference-createvendor-post"><span class="badge post"><i class="fa fa-plus"></i></span>CreateVendor</a></li><li><a href="#api-reference-p21paybycrypto-post"><span class="badge post"><i class="fa fa-plus"></i></span>P21PayByCrypto</a></li><li><a href="#api-reference-paymentstatus-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>PaymentStatus</a></li><li><a href="#api-reference-p21payout-post"><span class="badge post"><i class="fa fa-plus"></i></span>P21Payout</a></li><li><a href="#api-reference-payout-status-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Payout Status</a></li><li><a href="#api-reference-updatevendor">UpdateVendor</a><ul><li><a href="#api-reference-updatevendor-put"><span class="badge put"><i class="fa fa-pencil"></i></span>UpdateReplaceVendor</a></li><li><a href="#api-reference-updatevendor-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>UpdateModifyVendor</a></li></ul></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="https://app.payment21.com">https://app.payment21.com</a></p></nav><div class="content"><header><h1 id="top">Payment21® Crypto API 1.19</h1></header><p>The purpose of this document is to describe the requirements, usage, implementation and purpose of the Payment21® Application Programming Interface (API). The API will allow merchants to send payment requests through a consistently available online interface, which can integrate well with any of their existing systems.</p>
 <h4 id="header-version">Version <a class="permalink" href="#header-version" aria-hidden="true">¶</a></h4>
 <table>
     <tbody>
         <tr>
             <td><strong>Last updated</strong></td>
-            <td>31.10.2016</td>
+            <td>20.12.2016</td>
         </tr>
         <tr>
             <td><strong>Version No</strong></td>
-            <td>1.18</td>
+            <td>1.19</td>
         </tr>
         <tr>
             <td><strong>Owner</strong></td>
@@ -91,6 +91,12 @@
 <td>PI</td>
 <td>1.18</td>
 </tr>
+<tr>
+<td>20.12.16</td>
+<td>Add payout documentation</td>
+<td>PI</td>
+<td>1.19</td>
+</tr>
 </tbody>
 </table>
 <h2 id="header-confidentiality-notice">Confidentiality Notice <a class="permalink" href="#header-confidentiality-notice" aria-hidden="true">¶</a></h2>
@@ -110,7 +116,7 @@ Switzerland</p>
 <p>B. Payment21® Cashier Page</p>
 <p>The APIs are easy to integrate and you will be able to process transactions in a very short time.</p>
 <h3 id="header-1.1-supported-use-cases">1.1 Supported Use Cases <a class="permalink" href="#header-1.1-supported-use-cases" aria-hidden="true">¶</a></h3>
-<p><strong>The underlying API support the following use cases that are in general sufficient to perform crypto payment transaction.</strong></p>
+<p><strong>The underlying API support the following use cases that are in general sufficient to perform crypto incoming(payment) and outgoing(payout) transactions.</strong></p>
 <p><img src="images/supported_use_cases.png" alt="supported use cases"></p>
 <h3 id="header-1.2-payment21®-json-rest-api-">1.2 Payment21® JSON/REST API: <a class="permalink" href="#header-1.2-payment21®-json-rest-api-" aria-hidden="true">¶</a></h3>
 <p><strong>A merchant can access the Payment21 Web Service by implementing our REST API in the merchant’s site.</strong></p>
@@ -172,6 +178,34 @@ We are continuously monitoring the Bitcoin blockchain to detect the Bitcoin tran
 <p><strong>Step 6: Call the API method PaymentStatus to check if the payment was successful</strong><br>
 You can call the API method PaymentStatus to check if the payment was successful and show a confirmation page to the purchaser.</p>
 <p>Note: You can query the PaymentStatus at any time. We recommend checking the status after a short period of time in case the purchaser has interrupted the flow (e.g. by closing their browser window).</p>
+<h3 id="header-1.5-payment21®-payout-page">1.5 Payment21® Payout Page <a class="permalink" href="#header-1.5-payment21®-payout-page" aria-hidden="true">¶</a></h3>
+<p><strong>We also provide a checkout user interface for the payout requests where the payee can specify the Bitcoin address for receiving the payout .</strong></p>
+<p><img src="images/your_payout_request.png" alt="payout request"></p>
+<p><strong>Merchants simply redirect the purchaser to this payout page where the consumer initiates the Bitcoin payout request.</strong></p>
+<p>Once the payee enters the Bitcoin address, the payout is initialized and waiting to be further processed. The payee data will be transferred to the Payment21® system for verification, validation and processing. Depending on the configuration, the payee needs to go through the Payment21 KYC verification process before being eligible to accept the payout.</p>
+<p>See an example on the demo store: <a href="https://app.payment21.com/demopayout.html">https://app.payment21.com/demopayout.html</a>.</p>
+<h3 id="header-1.6-payout-use-case">1.6 Payout Use Case <a class="permalink" href="#header-1.6-payout-use-case" aria-hidden="true">¶</a></h3>
+<p><strong>The integration of the Payment21® payout page consists only of a few steps.</strong></p>
+<ol>
+<li>
+<p>The purchaser selects Payment21® for withdrawals (payout)</p>
+</li>
+<li>
+<p>Your application calls the API method “P21Payout”</p>
+</li>
+<li>
+<p>Your site redirects the payee to the returned redirectURL</p>
+</li>
+<li>
+<p>The payee will see the Payment21® Payout Page, enter the Bitcoin Address and starts the payout</p>
+</li>
+<li>
+<p>After confirming the payout, the payee is redirected back to your site.</p>
+</li>
+<li>
+<p>Call the API method PayoutStatus to check the status of the payout</p>
+</li>
+</ol>
 <h2 id="header-2-payment21®-json-rest-api">2 Payment21® JSON/REST API <a class="permalink" href="#header-2-payment21®-json-rest-api" aria-hidden="true">¶</a></h2>
 <p><strong>The integration of Payment21® functionality is effected directly in the merchant’s system using REST.</strong></p>
 <p>If the merchant’s consumer chooses the crypto payment method, then the merchant’s system creates the REST-request by using the matching JSON definition and sends it to the Payment21® REST web service. The Payment21® REST web service responds by returning the corresponding JSON reply to let your system know whether the request was valid and with generated data for the payment in case of successful request. Your page then uses this reply to display a confirmation page to the consumer. The consumer has to confirm the purchase to finalize the transaction. You can display the transaction summary to the user with all payment details as payment confirmation.</p>
@@ -205,6 +239,14 @@ You can call the API method PaymentStatus to check if the payment was successful
 <tr>
 <td>PaymentStatus</td>
 <td>Returns the status of the payment</td>
+</tr>
+<tr>
+<td>P21Payout</td>
+<td>Creates a payout request from merchant to the specified payee</td>
+</tr>
+<tr>
+<td>PayoutStatus</td>
+<td>Returns the status of the payout</td>
 </tr>
 </tbody>
 </table>
@@ -304,21 +346,93 @@ We are continuously monitoring the Bitcoin blockchain to detect the Bitcoin tran
 <p><strong>Step 6: Call the API method PaymentStatus to check if the payment was successful</strong><br>
 You can call the API method PaymentStatus to check if the payment was successful and show a confirmation page to the purchaser.</p>
 <p>Note: You can query the PaymentStatus at any time. We recommend checking the status after a short period of time in case the purchaser has interrupted the flow (e.g. by closing their browser window).</p>
-<h2 id="header-4-sandbox-api-connectivity-test">4 Sandbox API Connectivity Test <a class="permalink" href="#header-4-sandbox-api-connectivity-test" aria-hidden="true">¶</a></h2>
-<h3 id="header-4.1-merchant-back-office">4.1 Merchant Back Office <a class="permalink" href="#header-4.1-merchant-back-office" aria-hidden="true">¶</a></h3>
+<h2 id="header-4-payment21®-payout-page">4 Payment21® Payout Page <a class="permalink" href="#header-4-payment21®-payout-page" aria-hidden="true">¶</a></h2>
+<h3 id="header-4.1-introduction">4.1 Introduction <a class="permalink" href="#header-4.1-introduction" aria-hidden="true">¶</a></h3>
+<p><strong>The payout page is made for a simple and fast integration and provides all the necessary user interactions of the payee to complete the payout.</strong></p>
+<p><img src="images/your_payout_request_sample.png" alt="payout page"></p>
+<h3 id="header-4.2-how-to-integrate">4.2 How to integrate <a class="permalink" href="#header-4.2-how-to-integrate" aria-hidden="true">¶</a></h3>
+<p><strong>The integration of the Payment21® payout page consists only of a few steps.</strong></p>
+<ol>
+<li>
+<p>The purchaser selects Payment21® for withdrawals (payout)</p>
+</li>
+<li>
+<p>Your application calls the API method “P21Payout”</p>
+</li>
+<li>
+<p>Your site redirects the payee to the returned redirectURL</p>
+</li>
+<li>
+<p>The payee will see the Payment21® Payout Page, enter the Bitcoin Address and starts the payout</p>
+</li>
+<li>
+<p>After confirming the payout, the payee is redirected back to your site.</p>
+</li>
+<li>
+<p>Call the API method PayoutStatus to check the status of the payout</p>
+</li>
+</ol>
+<p><strong>Step 1: The purchaser selects Payment21® for withdrawals (payout)</strong><br>
+You have to add an option in your application for withdrawal (payout)</p>
+<p><strong>Step 2: Your application calls the API method “P21Payout”</strong><br>
+Your application calls the API method P21Payout to initialize the payout. This call includes details such as the amount, vendor and payee details.</p>
+<p>The P21Payout response contains a unique transaction-ID, which should be stored. You can use it to retrieve the status of the payout.</p>
+<p>The second value returned is a redirectURL used subsequently.</p>
+<p><strong>Step 3: Your site redirects the payee to the returned redirectURL</strong><br>
+You should now redirect the purchaser to the redirectURL which actually represents the Payment21® Payout Page.</p>
+<p><strong>Step 4: The payee will see the Payment21® Payout Page, enter the Bitcoin Address and starts the payout</strong><br>
+The payee can see the requested payout amount and the corresponding Bitcoin amount that will be sent to the payee. Before starting the payout, the payee needs to enter a valid Bitcoin Address.</p>
+<p><strong>Step 5: After confirming the payout, the payee is redirected back to your site</strong><br>
+After the payout is started, the payee is redirected back to the</p>
+<p><strong>Step 6: Call the API method PayoutStatus to check the status of the payout</strong><br>
+You can call the API method PayoutStatus at any time to check the status of the payout.</p>
+<h2 id="header-5-sandbox-api-connectivity-test">5 Sandbox API Connectivity Test <a class="permalink" href="#header-5-sandbox-api-connectivity-test" aria-hidden="true">¶</a></h2>
+<h3 id="header-5.1-merchant-back-office">5.1 Merchant Back Office <a class="permalink" href="#header-5.1-merchant-back-office" aria-hidden="true">¶</a></h3>
 <p><strong>During the signup process, you need to test the API connectivity through the sandbox test application in your merchant account back office. This enables you to test your API implementation in an early stage of your onboarding process with <a href="http://Payment21.com">Payment21.com</a>.</strong></p>
 <p>To start the sandbox test, login with your merchant account credentials and navigate to the Sandbox Test:</p>
 <p><img src="images/sandbox_test.png" alt="name"></p>
 <p>After clicking on “Generate Merchant API Key”, you will see your merchant ID and your API key as shown below:</p>
 <p><img src="images/api_key.png" alt="name"></p>
-<h3 id="header-4.2-bitcoin-testnet-(customization-upon-request)">4.2 Bitcoin Testnet (Customization upon request) <a class="permalink" href="#header-4.2-bitcoin-testnet-(customization-upon-request)" aria-hidden="true">¶</a></h3>
+<h3 id="header-5.2-bitcoin-testnet-(customization-upon-request)">5.2 Bitcoin Testnet (Customization upon request) <a class="permalink" href="#header-5.2-bitcoin-testnet-(customization-upon-request)" aria-hidden="true">¶</a></h3>
 <p><strong>If you want to test our Bitcoin Cashier System with the Bitcoin Testnet, you need to set up your Test Wallet first.</strong></p>
 <p>The Bitcoin Testnet is an alternative Bitcoin block chain, to be used for testing. Testnet coins are separate and distinct from actual Bitcoins, and are never supposed to have any value. This allows application developers or Bitcoin testers to experiment, without having to use real Bitcoins.</p>
 <p><a href="https://en.bitcoin.it/wiki/Testnet">https://en.bitcoin.it/wiki/Testnet</a></p>
 <p>If you want to test the Payment21® Bitcoin Cashier System with real Bitcoins, you need to set up your Bitcoin Wallet and purchase Bitcoin first.</p>
 <p><a href="https://bitcoin.org/en/getting-started">https://bitcoin.org/en/getting-started</a></p>
-<h2 id="header-5-appendix">5 Appendix <a class="permalink" href="#header-5-appendix" aria-hidden="true">¶</a></h2>
-<h3 id="header-5.1-api-response-&amp;-error-codes">5.1 API Response &amp; Error Codes <a class="permalink" href="#header-5.1-api-response-&amp;-error-codes" aria-hidden="true">¶</a></h3>
+<h2 id="header-6-appendix">6 Appendix <a class="permalink" href="#header-6-appendix" aria-hidden="true">¶</a></h2>
+<h3 id="header-6.1-supported-processing-currencies">6.1 Supported processing currencies <a class="permalink" href="#header-6.1-supported-processing-currencies" aria-hidden="true">¶</a></h3>
+<p><strong>Payment21® supports the following processing currencies for Payments and Payouts. The amounts for all currencies are expressed as decimal numbers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Currency</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USD</td>
+<td>United States dollar</td>
+</tr>
+<tr>
+<td>EUR</td>
+<td>Euro</td>
+</tr>
+<tr>
+<td>GBP</td>
+<td>British Pound</td>
+</tr>
+<tr>
+<td>CHF</td>
+<td>Swiss Franc</td>
+</tr>
+<tr>
+<td>JPY</td>
+<td>Japanese yen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="header-6.2-api-response-&amp;-error-codes">6.2 API Response &amp; Error Codes <a class="permalink" href="#header-6.2-api-response-&amp;-error-codes" aria-hidden="true">¶</a></h3>
 <p><strong>Payment21® provide a full set of response and error codes.</strong></p>
 <p>The JSON/REST API will return HTTP Status Code 200 if the request was processed successfully. Other codes signal errors as defined in the HTTP Protocol. To provide detailed information about the cause, an error object will be returned. It contains a field “error” with a string that is described in the table below.</p>
 <table>
@@ -429,7 +543,6 @@ You can call the API method PaymentStatus to check if the payment was successful
 </tr>
 </tbody>
 </table>
-<p><strong>Payment21® Crypto (P21PayByCrypto) Error Response Example:</strong></p>
 <pre><code><span class="hljs-status">HTTP/1.1 <span class="hljs-number">404</span> Not Found</span>
 <span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span>
 <span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span>
@@ -1193,7 +1306,327 @@ You can call the API method PaymentStatus to check if the payment was successful
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
       "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error code as numerical value"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">redirectTo</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descriptive message for the error"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"error"</span>,
+    <span class="hljs-string">"code"</span>,
+    <span class="hljs-string">"message"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="api-reference-p21payout" class="resource"><h3 class="resource-heading">P21Payout <a href="#api-reference-p21payout" class="permalink">&nbsp;&para;</a></h3><div id="api-reference-p21payout-post" class="action post"><h4 class="action-heading"><div class="name">P21Payout</div><a href="#api-reference-p21payout-post" class="method post">POST</a><code class="uri">/api/mapi/p21Payout</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://app.payment21.com</span>/api/mapi/p21Payout</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Input Parameters (An object of “Payment21® Crypto Payout (P21Payout)” with the following member variables):</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">apiKey</span>: <span class="hljs-string">apiKeyDEMO</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json, application/*+json</span><br><span class="hljs-attribute">Cache-Control</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">Pragma</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">User-Agent</span>: <span class="hljs-string">Java/1.8.0_25</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">app.payment21.com</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">539</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">merchantId</span>": <span class="hljs-value">-<span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">vendorId</span>": <span class="hljs-value"><span class="hljs-number">59</span></span>,
+  "<span class="hljs-attribute">payoutAmount</span>": <span class="hljs-value"><span class="hljs-number">20</span></span>,
+  "<span class="hljs-attribute">payoutCurrency</span>": <span class="hljs-value"><span class="hljs-string">"USD"</span></span>,
+  "<span class="hljs-attribute">merchantConsumerId</span>": <span class="hljs-value"><span class="hljs-string">"-2"</span></span>,
+  "<span class="hljs-attribute">merchantTransId</span>": <span class="hljs-value"><span class="hljs-string">"mt32789"</span></span>,
+  "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+  "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
+  "<span class="hljs-attribute">dateOfBirth</span>": <span class="hljs-value"><span class="hljs-string">"1970-12-27"</span></span>,
+  "<span class="hljs-attribute">docId</span>": <span class="hljs-value"><span class="hljs-string">"D234890"</span></span>,
+  "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"+1123456789"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"john@abccompanyChange.com"</span></span>,
+  "<span class="hljs-attribute">address1</span>": <span class="hljs-value"><span class="hljs-string">"123 First Street"</span></span>,
+  "<span class="hljs-attribute">address2</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+  "<span class="hljs-attribute">driverLicenseNumber</span>": <span class="hljs-value"><span class="hljs-string">"ddr-1234"</span></span>,
+  "<span class="hljs-attribute">passportNumber</span>": <span class="hljs-value"><span class="hljs-string">"GW34576"</span></span>,
+  "<span class="hljs-attribute">city</span>": <span class="hljs-value"><span class="hljs-string">"New York"</span></span>,
+  "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-string">"NY"</span></span>,
+  "<span class="hljs-attribute">postalCode</span>": <span class="hljs-value"><span class="hljs-string">"12345"</span></span>,
+  "<span class="hljs-attribute">country</span>": <span class="hljs-value"><span class="hljs-string">"US"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "title" : "P21PayoutRequest",
+  "description" : "Input parameters for the operation P21Payout",
+  "type" : "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "properties" : {
+    "merchantId" : {
+      "type" : "integer",
+      "description" : "Merchant User ID as assigned by Payment21.com"
+    },
+    "vendorId" : {
+      "type" : "integer",
+      "description" : "Vendor ID as assigned by Payment21.com"
+    },
+    "apiKey" : {
+      "type" : "string",
+      "description" : "Merchant API Key as assigned by Payment21.com",
+      "maxLength" : 50,
+      "in": "header|body"
+    },
+    "payoutAmount" : {
+      "type" : "number",
+      "description" : “Payout amount."
+    },
+    "payoutCurrency" : {
+      "type" : "string",
+      "description" : "Currency code, ISO 4217"
+    },
+    "merchantConsumerId" : {
+      "type" : "string",
+      "description" : "An ID which uniquely identifies the purchaser of the given vendor. Successive calls have to use the same id for the same purchaser.",
+      "maxLength" : 36,
+      "minLength" : 1
+    },
+    "merchantTransId" : {
+      "type" : "string",
+      "description" : "Merchant payout ID",
+      "maxLength" : 36
+    },
+    "firstName" : {
+      "type" : "string",
+      "description" : "Consumer's first name",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "lastName" : {
+      "type" : "string",
+      "description" : "Consumer's last name",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "dateOfBirth" : {
+      "type" : "string",
+      "description" : "Consumer's date of birth",
+      "format" : "date"
+    },
+    "docId" : {
+      "type" : "string",
+      "description" : "Identification document number",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "phone" : {
+      "type" : "string",
+      "description" : "Consumer's phone",
+      "maxLength" : 50
+    },
+    "email" : {
+      "type" : "string",
+      "description" : "Consumer's email address",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "address1" : {
+      "type" : "string",
+      "description" : "Consumer's address field one",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "address2" : {
+      "type" : "string",
+      "description" : "Consumer's address field two",
+      "maxLength" : 50
+    },
+    "driverLicenseNumber" : {
+      "type" : "string",
+      "description" : "Consumer's driver license number",
+      "maxLength" : 50
+    },
+    "passportNumber" : {
+      "type" : "string",
+      "description" : "Consumer's passport number",
+      "maxLength" : 50
+    },
+    "city" : {
+      "type" : "string",
+      "description" : "Consumer's address city",
+      "maxLength" : 50,
+      "minLength" : 1
+    },
+    "state" : {
+      "type" : "string",
+      "description" : "Consumer's address state code",
+      "maxLength" : 50
+    },
+    "postalCode" : {
+      "type" : "string",
+      "description" : "5 digit postal code in the consumer's country (or ZIP)",
+      "maxLength" : 10,
+      "minLength" : 1
+    },
+    "country" : {
+      "type" : "string",
+      "description" : "Consumer's country, e.g. 'United Kingdom'",
+      "maxLength" : 50
+    }
+  },
+  "required": [
+    "merchantId",
+    "vendorId",
+    "payoutAmount",
+    "payoutCurrency",
+    "merchantConsumerId",
+    "firstName",
+    "lastName",
+    "email",
+    "country"
+  ]
+}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 17:42:31 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">135</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">transactionId</span>": <span class="hljs-value"><span class="hljs-string">"633d4fb2-dd0c-4d5b-87e7-c6b2349adbab"</span></span>,
+  "<span class="hljs-attribute">redirectTo</span>": <span class="hljs-value"><span class="hljs-string">"https://app.payment21.com/payout.html#/!/?transactionId=633d4fb2-dd0c-4d5b-87e7-c6b2349adbab"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "transactionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "description": "Contains transaction ID of the added payout request”
+    },
+    "redirectTo": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250,
+      "description": "The URL the payee needs to be redirected to"
+    }
+  },
+  "required": [
+    "transactionId",
+    "redirectTo"
+  ]
+}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 17:42:31 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">135</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"WRONG_USERNAME_OR_PASSWORD"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Wrong 'username', 'password' or 'apiKey' provided"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">error</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error as found in the Error Code List"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error code as numerical value"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Descriptive message for the error"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"error"</span>,
+    <span class="hljs-string">"code"</span>,
+    <span class="hljs-string">"message"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="api-reference-payout-status" class="resource"><h3 class="resource-heading">Payout Status <a href="#api-reference-payout-status" class="permalink">&nbsp;&para;</a></h3><div id="api-reference-payout-status-get" class="action get"><h4 class="action-heading"><div class="name">Payout Status</div><a href="#api-reference-payout-status-get" class="method get">GET</a><code class="uri">/api/mapi/payoutStatus/{merchantId}/{transactionId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://app.payment21.com</span>/api/mapi/payoutStatus/<span class="hljs-attribute" title="merchantId">-1</span>/<span class="hljs-attribute" title="transactionId">633d4fb2-dd0c-4d5b-87e7-c6b2349adbab</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>merchantId</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>-1</span></span></dd><dt>transactionId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>633d4fb2-dd0c-4d5b-87e7-c6b2349adbab</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">apiKey</span>: <span class="hljs-string">demoShopApiKey</span><br><span class="hljs-attribute">Accept</span>: <span class="hljs-string">application/json, application/*+json</span><br><span class="hljs-attribute">Cache-Control</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">Pragma</span>: <span class="hljs-string">no-cache</span><br><span class="hljs-attribute">User-Agent</span>: <span class="hljs-string">Java/1.8.0_25</span><br><span class="hljs-attribute">Host</span>: <span class="hljs-string">app.payment21.com</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span></code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Path and header parameters"</span></span>,
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">parameters</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">apiKey</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Merchant API Key as assigned by Payment21.com"</span></span>,
+      "<span class="hljs-attribute">in</span>": <span class="hljs-value"><span class="hljs-string">"header"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">merchantId</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Merchant User ID as assigned by Payment21.com"</span></span>,
+      "<span class="hljs-attribute">in</span>": <span class="hljs-value"><span class="hljs-string">"path"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">transactionId</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"The transaction ID for which to get the status"</span></span>,
+      "<span class="hljs-attribute">in</span>": <span class="hljs-value"><span class="hljs-string">"path"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"apiKey"</span>,
+    <span class="hljs-string">"merchantId"</span>,
+    <span class="hljs-string">"transactionId"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p><strong>Return Response:</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Payout Status</td>
+            <td>The status of the requested payout.<br/>
+                Possible values:<br/>
+                <strong>Initialized:</strong> The Payout has been initialized<br/>
+                <strong>Awaiting_Verification:</strong> The payee needs to trigger the KYC verification process in Payment21 <br/>
+                <strong>Verified:</strong> The payee has succesfully finished the KYC process in Payment21 and is ready to accept the payout<br/>
+                <strong>Awaiting_Funding:</strong> Awaiting the necessary fundings for processing the payout<br/>
+                <strong>Funded:</strong> The payout has been funded and is ready to be sent to the payee<br/>
+                <strong>Awaiting_Confirmation:</strong> The transaction was sent to the payee. Waiting for receipt confirmation<br/>
+                <strong>Finished:</strong> The Payout has been sent and confirmed by the payee<br/>
+                <strong>Expired:</strong> The Payout has expired<br/>
+                <strong>Canceled:</strong> The Payout has been canceled by the payee<br/>
+                <strong>Failed:</strong> The Payout has failed for other reasons<br/>
+            </td>
+        </tr>
+        <tr>
+            <td>Code</td>
+            <td>
+                <strong>1..7:</strong> Positive code from 1-7 means the Payout is still in progress and the final status is not reached yet <br/>
+                <strong>-2:</strong> When the payout status is Failed<br/>
+                <strong>-3:</strong> When the payout status is Expired<br/>
+                <strong>-4:</strong> When the payout status is Canceled<br/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">status</span>":<span class="hljs-value"><span class="hljs-string">"Initialized"</span></span>,
+    "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "description": "The status of the requested payout.”
+    },
+    “code”: {
+      "type": "integer",
+      "description": “Numeric code for the status“
+    }
+  },
+  "required": [
+    "status"
+  ]
+}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 17:42:31 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">135</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"WRONG_USERNAME_OR_PASSWORD"</span></span>,
+  "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Wrong 'username', 'password' or 'apiKey' provided"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">error</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error as found in the Error Code List"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Error code as numerical value"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
       "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
       "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
@@ -1873,7 +2306,7 @@ You can call the API method PaymentStatus to check if the payment was successful
     <span class="hljs-string">"company"</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>This method doesn’t return any information if successfully called. Please see the API error section for further details.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 31 Oct 2016</p><script>/* eslint-env browser */
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 20 Dec 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
