@@ -179,13 +179,13 @@ We are continuously monitoring the Bitcoin blockchain to detect the Bitcoin tran
 You can call the API method PaymentStatus to check if the payment was successful and show a confirmation page to the purchaser.</p>
 <p>Note: You can query the PaymentStatus at any time. We recommend checking the status after a short period of time in case the purchaser has interrupted the flow (e.g. by closing their browser window).</p>
 <h3 id="header-1.5-payment21®-payout-page">1.5 Payment21® Payout Page <a class="permalink" href="#header-1.5-payment21®-payout-page" aria-hidden="true">¶</a></h3>
-<p><strong>We also provide a checkout user interface for the payout requests where the payee can specify the Bitcoin address for receiving the payout.</strong></p>
+<p><strong>We provide a checkout user interface for payout requests allowing the payee to specify a Bitcoin address for receiving payouts.</strong></p>
 <p><img src="images/your_payout_request.png" alt="payout_request"></p>
 <p><strong>Merchants simply redirect the payee to this payout page where the payee initiates the Bitcoin payout request.</strong></p>
 <p>Once the payee enters the Bitcoin address, the payout is initialized and waiting to be further processed. The payee data will be transferred to the Payment21® system for verification, validation and processing. Depending on the configuration, the payee needs to go through the AML/KYC verification process before being eligible to accept the payout.</p>
 <p>See an example on the demo payout: <a href="https://app.payment21.com/demopayout.html">https://app.payment21.com/demopayout.html</a>.</p>
 <h3 id="header-1.6-payout-use-case">1.6 Payout Use Case <a class="permalink" href="#header-1.6-payout-use-case" aria-hidden="true">¶</a></h3>
-<p><strong>The integration of the Payment21® payout page consists of a few steps,</strong></p>
+<p><strong>The integration of the Payment21® payout page consists of a few steps.</strong></p>
 <ol>
 <li>
 <p>The payee selects Bitcoin for withdrawals (payout)</p>
@@ -197,7 +197,7 @@ You can call the API method PaymentStatus to check if the payment was successful
 <p>Your site redirects the payee to the returned redirectURL</p>
 </li>
 <li>
-<p>The payee will see the Payment21® Payout Page, enters the Bitcoin address and starts the payout</p>
+<p>The payee views the Payment21® Payout Page, enters the Bitcoin address and starts the payout</p>
 </li>
 <li>
 <p>After confirming the payout, the payee is redirected back to your site</p>
@@ -351,7 +351,7 @@ You can call the API method PaymentStatus to check if the payment was successful
 <p><strong>The payout page is made for a simple and fast integration and provides all the necessary user interactions of the payee to complete the payout.</strong></p>
 <p><img src="images/your_payout_request_sample.png" alt="payout_page"></p>
 <h3 id="header-4.2-how-to-integrate">4.2 How to integrate <a class="permalink" href="#header-4.2-how-to-integrate" aria-hidden="true">¶</a></h3>
-<p><strong>The integration of the Payment21® payout page consists of a few steps,</strong></p>
+<p><strong>The integration of the Payment21® payout page consists of a few steps.</strong></p>
 <ol>
 <li>
 <p>The payee selects Bitcoin for withdrawals (payout)</p>
@@ -363,7 +363,7 @@ You can call the API method PaymentStatus to check if the payment was successful
 <p>Your site redirects the payee to the returned redirectURL</p>
 </li>
 <li>
-<p>The payee will see the Payment21® Payout Page, enters the Bitcoin address and starts the payout</p>
+<p>The payee views the Payment21® Payout Page, enters the Bitcoin address and starts the payout</p>
 </li>
 <li>
 <p>After confirming the payout, the payee is redirected back to your site</p>
@@ -373,15 +373,15 @@ You can call the API method PaymentStatus to check if the payment was successful
 </li>
 </ol>
 <p><strong>Step 1: The payee selects Payment21® for withdrawals (payout)</strong><br>
-You have to add an option in your application for withdrawal (payout)</p>
+You have to add an option in your application for withdrawals (payout)</p>
 <p><strong>Step 2: Your application calls the API method “P21Payout”</strong><br>
 Your application calls the API method P21Payout to initialize the payout. This call includes details such as the amount, vendor and payee details.</p>
 <p>The P21Payout response contains a unique transaction-ID, which should be stored. You can use it to retrieve the status of the payout.</p>
 <p>The second value returned is a redirectURL used subsequently.</p>
 <p><strong>Step 3: Your site redirects the payee to the returned redirectURL</strong><br>
 You should now redirect the payee to the redirectURL which actually represents the Payment21® Payout Page.</p>
-<p><strong>Step 4: The payee will see the Payment21® Payout Page, enter the Bitcoin address and starts the payout</strong><br>
-The payee can see the requested payout amount and the corresponding Bitcoin amount that will be sent to the payee. Before starting the payout, the payee needs to enter a valid Bitcoin address.</p>
+<p><strong>Step 4: The payee views the Payment21® Payout Page, enters the Bitcoin address and starts the payout</strong><br>
+The payee can see the requested payout amount and the corresponding bitcoin amount that will be sent to the payee. Before starting the payout, the payee needs to enter a valid Bitcoin address.</p>
 <p><strong>Step 5: After confirming the payout, the payee is redirected back to your site</strong><br>
 After the payout is started, the payee is redirected back to your site.</p>
 <p><strong>Step 6: Call the API method PayoutStatus to check the status of the payout</strong><br>
@@ -403,7 +403,7 @@ You can call the API method PayoutStatus at any time to check the status of the 
 <p><a href="https://bitcoin.org/en/getting-started">https://bitcoin.org/en/getting-started</a></p>
 <h2 id="header-6-appendix">6 Appendix <a class="permalink" href="#header-6-appendix" aria-hidden="true">¶</a></h2>
 <h3 id="header-6.1-supported-processing-currencies">6.1 Supported processing currencies <a class="permalink" href="#header-6.1-supported-processing-currencies" aria-hidden="true">¶</a></h3>
-<p><strong>Payment21® supports the following processing currencies for incoming and outgoing transactions. The amounts for all currencies are expressed as decimal numbers.</strong></p>
+<p><strong>Payment21® supports the following processing currencies for incoming and outgoing transactions.</strong></p>
 <table>
 <thead>
 <tr>
@@ -434,6 +434,7 @@ You can call the API method PayoutStatus at any time to check the status of the 
 </tr>
 </tbody>
 </table>
+<p>The amounts for all currencies are expressed as decimal numbers.</p>
 <h3 id="header-6.2-api-response-&amp;-error-codes">6.2 API Response &amp; Error Codes <a class="permalink" href="#header-6.2-api-response-&amp;-error-codes" aria-hidden="true">¶</a></h3>
 <p><strong>Payment21® provide a full set of response and error codes.</strong></p>
 <p>The JSON/REST API will return HTTP Status Code 200 if the request was processed successfully. Other codes signal errors as defined in the HTTP Protocol. To provide detailed information about the cause, an error object will be returned. It contains a field “error” with a string that is described in the table below.</p>
@@ -2308,7 +2309,7 @@ You can call the API method PayoutStatus at any time to check the status of the 
     <span class="hljs-string">"company"</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>This method doesn’t return any information if successfully called. Please see the API error section for further details.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 20 Dec 2016</p><script>/* eslint-env browser */
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 21 Dec 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
