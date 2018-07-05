@@ -164,7 +164,7 @@ Switzerland</p>
 </li>
 </ul>
 <h3 id="header-1.1-supported-use-cases">1.1 Supported Use Cases <a class="permalink" href="#header-1.1-supported-use-cases" aria-hidden="true">¶</a></h3>
-<p><strong>The underlying API support the following use cases that are in general sufficient to perform crypto incoming(payment) and outgoing(payout) transactions.</strong></p>
+<p><strong>The underlying API supports the following use cases, which are in general sufficient to perform incoming and outgoing payment transactions in cryptocurrency.</strong></p>
 <p><img src="images/supported_use_cases.png" alt="supported use cases"></p>
 <h3 id="header-1.2-payment21®-json-rest-api-">1.2 Payment21® JSON/REST API: <a class="permalink" href="#header-1.2-payment21®-json-rest-api-" aria-hidden="true">¶</a></h3>
 <p><strong>A merchant can access the Payment21 Web Service by implementing our REST API in their web application.</strong></p>
@@ -182,7 +182,7 @@ Switzerland</p>
 </li>
 </ul>
 <h3 id="header-1.3-payment21®-cashier-page-">1.3 Payment21® Cashier Page: <a class="permalink" href="#header-1.3-payment21®-cashier-page-" aria-hidden="true">¶</a></h3>
-<p><strong>We provide a checkout user interface containing the payment details such as the Bitcoin address and a corresponding QR-Code.</strong></p>
+<p><strong>We provide a checkout user interface containing payment details such as the Bitcoin address and a corresponding QR-Code.</strong></p>
 <p><img src="images/your_online_shop_payment_process.png" alt="supported use cases"></p>
 <p><strong>Merchants simply redirect the purchaser to this cashier page, where the consumer initiates the Bitcoin payment.</strong></p>
 <p>At the Payment21® Cashier Page, your consumer will see the required details for payment directly on our website. The consumer data will be transferred to the Payment21® system for verification, validation and processing. After the purchaser has completed the payment, he/she is redirected back to your site where you can display a confirmation page.</p>
@@ -309,15 +309,17 @@ Switzerland</p>
 <p>If your API key is lost or compromised, Payment21® can create a new one for you. For security reasons, we cannot recover your previous API key.</p>
 <h2 id="header-3.-payment21®-cashier-page">3. Payment21® Cashier Page <a class="permalink" href="#header-3.-payment21®-cashier-page" aria-hidden="true">¶</a></h2>
 <h3 id="header-3.1-introduction">3.1 Introduction <a class="permalink" href="#header-3.1-introduction" aria-hidden="true">¶</a></h3>
-<p><strong>The cashier page is made for a simple and fast integration and provides all the necessary user interactions of the purchaser to complete the payment.</strong></p>
-<p>You first announce the payment to Payment21® via the P21PayByCrypto API endpoint and redirect the purchaser to the cashier page hosted by <a href="https://www.payment21.com">Payment21.com</a>. After the Bitcoin payment is made, the purchaser is redirected back to your site or confirmation page.</p>
-<p>Once you have integrated our cashier page, your consumer can pay for goods and services purchased by using “cryptocurrency” (Bitcoin, XBT). The API will transfer consumer data to the Payment21®-system for processing. <strong>Please note that the minimum payment amount is 8 USD.</strong></p>
+<p><strong>The cashier page is made for a quick and simple integration and provides all the necessary user interactions of the purchaser to complete the payment.</strong></p>
+<p>You first announce the payment to Payment21® via the P21PayByCrypto API endpoint and redirect the purchaser to the cashier page hosted by <a href="https://www.payment21.com">Payment21.com</a>. After the Bitcoin payment is made, the purchaser is redirected back to your site or to the confirmation page.</p>
+<p>Once you have integrated our cashier page, your consumer can pay for goods and services by using “cryptocurrency” (Bitcoin, XBT). The API will transfer the consumer data to the Payment21®-system for processing. <strong>Please note that the minimum payment amount is 8 USD.</strong></p>
 <p>If a consumer profile already exists in your database (that is, the merchant’s database), you can prefill fields such as the consumer first name, last name, address and other contact information automatically. The consumer adds data related to the payment details into the fields, and makes the payment. We have additional security fields requesting details such as the consumer’s ID document, passport number and driver’s license number. The data entered will be stored in the Payment21® database for future resolution.</p>
 <p>Payment21® will send an email to the consumer regarding his/her payment status. Additionally, the merchant receives a confirmation email containing the details of the transaction and purchase.</p>
 <h3 id="header-3.2-what-the-merchant’s-consumers-will-see">3.2 What the merchant’s consumers will see <a class="permalink" href="#header-3.2-what-the-merchant’s-consumers-will-see" aria-hidden="true">¶</a></h3>
 <p><strong>Once your site is ready to use the API, you can add Payment21® crypto payments to your payment options.</strong></p>
 <p>Your consumer can now choose to pay by “cryptocurrency” (Bitcoin, XBT).</p>
-<p>Before the payment page is displayed for the consumer, the merchant sends information about the order through the API for verification, validation and authentication. This verification is done on the Payment21® side. Once the order information is successfully verified, the consumer will be redirected to the Payment21® crypto payment page. This is a secure form, which allows the consumer to pay using Bitcoin. See an example on the demo store: <a href="https://app.payment21.com/demoshop.html">https://app.payment21.com/demoshop.html</a>.</p>
+<p>Before the payment page is displayed for the consumer, the merchant sends information about the order through the API for verification, validation and authentication. This verification is done on the Payment21® side. Once the order information is successfully verified, the consumer will be redirected to the Payment21® crypto payment page. This is a secure form, which allows the consumer to pay using Bitcoin. See an example on the demo store:
+<br/>
+<a href="https://app.payment21.com/demoshop.html">https://app.payment21.com/demoshop.html</a>.</p>
 <p>As the first step, consumers have to explicitly agree with the Terms and Conditions by marking a checkbox and clicking “Start Payment”.</p>
 <p><img src="images/payment_details.jpg" alt="name"></p>
 <p>After the confirmation, the consumer is shown a QR-Code along with their payment details.</p>
@@ -469,7 +471,7 @@ The UI is built to be completely self-explanatory and therefore does not require
 <p><strong>If you want to test our Bitcoin Cashier System with the Bitcoin Testnet, you need to set up your Test Wallet first.</strong></p>
 <p>The Bitcoin Testnet is an alternative Bitcoin blockchain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and are never supposed to have any value. This allows application developers and/or Bitcoin testers to experiment, without having to use real bitcoins.</p>
 <p><a href="https://en.bitcoin.it/wiki/Testnet">https://en.bitcoin.it/wiki/Testnet</a></p>
-<p>If you want to test the Payment21® Bitcoin Cashier System with real bitcoins, you need to set up your Bitcoin Wallet and purchase bitcoin first.</p>
+<p>If you want to test the Payment21® Bitcoin Cashier System with real bitcoins, you need to set up your Bitcoin Wallet and purchase bitcoins first.</p>
 <p><a href="https://bitcoin.org/en/getting-started">https://bitcoin.org/en/getting-started</a></p>
 <h2 id="header-9.-appendix">9. Appendix <a class="permalink" href="#header-9.-appendix" aria-hidden="true">¶</a></h2>
 <h3 id="header-9.1-supported-processing-currencies">9.1 Supported processing currencies <a class="permalink" href="#header-9.1-supported-processing-currencies" aria-hidden="true">¶</a></h3>
@@ -2536,7 +2538,7 @@ The UI is built to be completely self-explanatory and therefore does not require
     <span class="hljs-string">"company"</span>
   ]
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>This method doesn’t return any information if successfully called. Please see the API error section for further details.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 24 Jun 2018</p><script>/* eslint-env browser */
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json;charset=UTF-8</span><br><span class="hljs-attribute">Server</span>: <span class="hljs-string">Apache-Coyote/1.1</span><br><span class="hljs-attribute">X-Content-Type-Options</span>: <span class="hljs-string">nosniff</span><br><span class="hljs-attribute">X-XSS-Protection</span>: <span class="hljs-string">1; mode=block</span><br><span class="hljs-attribute">X-Frame-Options</span>: <span class="hljs-string">DENY</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 13 Jan 2016 22:17:35 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">close</span><br><span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">0</span></code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 25 Jun 2018</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
